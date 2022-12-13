@@ -1,13 +1,29 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  for(let i = 0; i < word.length / 2; i++)
+  {
+    if(word[i] != word[word.length - i - 1])
+    {
+      return false
+    }else{
+    return true
+    }
+    
+  }
 }
 
 /* 
-  Add your pseudocode here
+  
+  * for loop through half the length of word
+  * if the first half is not equal to last half return false
+  * Otherwise return true
 */
 
 /*
-  Add written explanation of your solution here
+  * I had to compare the first half of the string with it's last.
+  * If they match it is a palindrome
+  * You can find half the length of a string by using the method 'stringname.length / 2'
+  * Take the first half and loop throgh it and also loop through the second half from the back
+  * Note: Looping from the back does not start from index 0, it starts from -1
 */
 
 // You can run `node index.js` to view these console logs
@@ -23,3 +39,5 @@ if (require.main === module) {
 }
 
 module.exports = isPalindrome;
+
+console.log(isPalindrome('wordfgrow'))
